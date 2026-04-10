@@ -9,5 +9,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          echo "Running on ephemeral runner"
+          echo "Running on ephemeral runner jou"
           hostname
