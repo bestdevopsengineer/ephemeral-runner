@@ -5,9 +5,14 @@ on:
 
 jobs:
   test:
-    runs-on: [ephemeral]
+    runs-on: ubuntu-22.04
+    environment: DEV
     steps:
       - uses: actions/checkout@v4
       - run: |
           echo "Running on ephemeral runner jou"
           hostname
+      - name: Print secret
+        run: echo "The secret is $DEVNAME"
+        env:
+          DEVNAME: ${{ secrets.DEVNAME }}
